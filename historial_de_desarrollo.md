@@ -6,8 +6,8 @@
 
 ## Checkpoint Actual
 * **Fecha de inicio:** Mayo 2026
-* **Estado Global:** Preparación para Producción.
-* **Paso Activo según Plan:** Configuración de dominio, correos corporativos y despliegue en Vercel.
+* **Estado Global:** Hub de Distribución Operativo (Listo para Producción).
+* **Paso Activo según Plan:** Despliegue en Vercel y vinculación del dominio norteexpress.com.ar.
 
 ---
 
@@ -64,6 +64,14 @@
 - [x] **Visibilidad de Guarda Salteña:** Se aumentó significativamente la opacidad del patrón regional en `SocialProof.tsx` y se utilizaron fondos cristalinos en las tarjetas para que la identidad de Salta destaque correctamente de fondo.
 - [x] **Optimización de Renderizado (Scroll Fix):** Se cambió la posición del contenedor de fondos dinámicos en `page.tsx` de `absolute` a `fixed h-screen`. Esto evita que el navegador intente estirar los videos al alto total de la página, resolviendo el colapso de la memoria GPU que dejaba la pantalla en blanco, generaba espacios muertos y bloqueaba el scroll.
 - [x] **Preparación de Assets y Dominio:** Se limpiaron assets innecesarios (videos borrados) y se inició la planificación para la vinculación del dominio `.com.ar` y correos corporativos.
+- [x] **Hub de Descarga Directa:** Se implementó exitosamente la ruta `/descargar` con tarjetas premium para la distribución de los instaladores (`norte-cliente.apk` y `norte-rider.apk`), incluyendo una guía de instalación segura paso a paso para Android.
+- [x] **Rediseño Premium del Hub de Descargas:** Se reescribió `app/descargar/page.tsx` con un diseño en grid (3 tarjetas Glassmorphism) que incluye *N.O.R.T.E. Delivery*, *N.O.R.T.E. Cadete* y *N.O.R.T.E. Comercio*, y se reestructuró la Guía de Instalación Segura con la paleta de colores oficial.
+- [x] **Tutorial de Confianza Visual:** Se integraron las imágenes `tuto-web.png` y `Tuto-celular.png` antes de los enlaces de descarga en `/descargar` de forma responsive para aumentar la confianza y seguridad del usuario.
+- [x] **Unificación de Enlaces de Descarga al Hub:** Se modificaron todos los componentes (Navbar, Hero, TripleEntrada, Descargas) para que los botones y enlaces de descarga apunten directamente a la ruta `/descargar` (Hub de Descargas) en lugar de realizar descargas directas (`.apk`) o navegar a la sección anclada (`#descargas`). Se usó estrictamente el componente `<Link>` de Next.js.
+- [x] **Persistencia de Audio Global:** Se extrajo toda la lógica de audio y el reproductor flotante del archivo `app/page.tsx` y se creó un nuevo componente `AudioPlayer.tsx`. Este fue integrado en `app/layout.tsx` para garantizar que la música no se corte al navegar entre la landing page y el Hub de Descargas.
+- [x] **Integración de Imágenes de Marketing:** Se añadieron las 5 imágenes ilustrativas de los servicios en `app/TripleEntrada.tsx` integrándolas como banners dentro de cada tarjeta con diseño premium. Se incorporó la imagen `Tecnologia Global2.jpg` en la sección `app/QuienesSomos.tsx` como un bloque visual destacado que acompaña el manifiesto.
+- [x] **Migración de APK Comercio a Google Drive:** Se actualizó el enlace de descarga de *N.O.R.T.E. Comercio* en el Hub de Descargas (`app/descargar/page.tsx`) hacia un servidor externo, agregando atributos de seguridad (`target="_blank"`, `rel="noopener noreferrer"`) y actualizando sutilmente el texto descriptivo con el tamaño estimado (~109 MB).
+- [x] **Optimización de Rendimiento de Imágenes:** Se resolvió la advertencia de Next.js en `app/QuienesSomos.tsx` añadiendo la propiedad `sizes` a la imagen `Tecnologia Global2.jpg`, mejorando la carga y rendimiento de la página.
 
 ---
 *Nota para el Agente: Al completar un paso, marca la casilla con una 'x', actualiza el 'Paso Activo' y añade una breve nota técnica si es necesario.*

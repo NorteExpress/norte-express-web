@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Descargas() {
     return (
@@ -21,16 +22,16 @@ export default function Descargas() {
                     <div className="md:col-span-2 group relative bg-gradient-to-br from-[#f39200]/10 to-[#132540]/80 backdrop-blur-2xl border border-[#f39200]/30 hover:border-[#f39200]/60 rounded-[2.5rem] p-8 md:p-12 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(243,146,0,0.3)] flex flex-col md:flex-row items-center gap-8 md:gap-12 overflow-hidden">
                         <div className="absolute inset-0 bg-[#f39200]/0 group-hover:bg-[#f39200]/5 transition-colors duration-500 pointer-events-none"></div>
                         <div className="relative w-48 h-48 sm:w-64 sm:h-64 min-h-[12rem] sm:min-h-[16rem] flex-shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)]">
-                            <Image src="/images/Norte Delivery.png" alt="App N.O.R.T.E. Delivery" fill sizes="(max-width: 768px) 192px, 256px" className="object-contain" />
+                            <Image src="/images/Norte Delivery.png" alt="App N.O.R.T.E. Delivery" fill sizes="(max-width: 768px) 192px, 256px" className="object-contain" priority />
                         </div>
                         <div className="flex flex-col items-center md:items-start text-center md:text-left flex-grow relative z-10">
                             <span className="inline-block px-4 py-1.5 rounded-full bg-[#f39200]/20 text-[#f39200] text-xs font-bold uppercase tracking-widest border border-[#f39200]/30 mb-4">App de Clientes</span>
                             <h3 className="text-3xl sm:text-4xl font-black text-white mb-4">N.O.R.T.E. Delivery</h3>
                             <p className="text-gray-300 mb-8 text-lg leading-relaxed">Pedí lo que necesites, rastrealo en tiempo real y disfrutá de la logística más rápida del Norte Argentino directo desde tu celular.</p>
-                            <button className="w-full sm:w-auto bg-[#f39200] hover:bg-orange-500 text-white rounded-xl py-4 px-8 font-bold flex items-center justify-center gap-3 transition-transform hover:scale-105 shadow-lg shadow-orange-500/30 text-lg">
+                            <Link href="/descargar" className="w-full sm:w-auto bg-[#f39200] hover:bg-orange-500 text-white rounded-xl py-4 px-8 font-bold flex items-center justify-center gap-3 transition-transform hover:scale-105 shadow-lg shadow-orange-500/30 text-lg">
                                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                                Descarga Directa (APK)
-                            </button>
+                                Ir a Descargar (Hub)
+                            </Link>
                         </div>
                     </div>
 
@@ -42,10 +43,10 @@ export default function Descargas() {
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-4">Para tu Negocio</h3>
                         <p className="text-gray-400 mb-8 flex-grow">Gestioná tus pedidos, visualizá reportes en tiempo real y solicitá cadetes con un solo toque.</p>
-                        <button className="w-full bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl py-3 px-4 font-bold flex items-center justify-center gap-2 transition-colors">
+                        <Link href="/descargar" className="w-full bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl py-3 px-4 font-bold flex items-center justify-center gap-2 transition-colors">
                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                            Descarga Directa (APK)
-                        </button>
+                            Ir a Descargar (Hub)
+                        </Link>
                     </div>
 
                     {/* Tarjeta App Cadete */}
@@ -56,10 +57,10 @@ export default function Descargas() {
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-4">Para vos (Rider)</h3>
                         <p className="text-gray-400 mb-8 flex-grow">Recibí alertas de viajes cercanos, trazá las mejores rutas y controlá tus ganancias diarias.</p>
-                        <button className="w-full bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl py-3 px-4 font-bold flex items-center justify-center gap-2 transition-colors">
+                        <Link href="/descargar" className="w-full bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl py-3 px-4 font-bold flex items-center justify-center gap-2 transition-colors">
                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                            Descarga Directa (APK)
-                        </button>
+                            Ir a Descargar (Hub)
+                        </Link>
                     </div>
                 </div>
 

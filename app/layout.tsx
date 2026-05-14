@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import AudioPlayer from "./AudioPlayer";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +21,8 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${inter.className} bg-norte-azul text-white antialiased`}>
         {children}
+        <AudioPlayer />
+        <Analytics />
       </body>
     </html>
   );

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
     return (
@@ -25,19 +26,19 @@ export default function Hero() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start w-full sm:w-auto">
-                    <a
-                        href="#descargas"
+                    <Link
+                        href="/descargar"
                         className="inline-flex items-center justify-center px-10 py-5 bg-[#f39200] text-white rounded-full font-extrabold text-lg transition-all duration-500 ease-out transform-gpu hover:scale-105 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(243,146,0,0.6)] relative overflow-hidden group"
                     >
                         <span className="absolute top-0 left-[-100%] w-[50%] h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-[-20deg] group-hover:left-[200%] transition-all duration-1000 ease-out"></span>
                         Comenzar Ahora
-                    </a>
-                    <a href="#servicios" className="inline-flex items-center justify-center px-10 py-5 bg-white/5 backdrop-blur-lg border border-white/20 text-white rounded-full font-bold text-lg transition-all duration-500 ease-out hover:bg-white/10 hover:border-white/40 hover:scale-105 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)]">
+                    </Link>
+                    <Link href="#servicios" className="inline-flex items-center justify-center px-10 py-5 bg-white/5 backdrop-blur-lg border border-white/20 text-white rounded-full font-bold text-lg transition-all duration-500 ease-out hover:bg-white/10 hover:border-white/40 hover:scale-105 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)]">
                         Ver Servicios
-                    </a>
+                    </Link>
                 </div>
             </div>
-            <a href="#descargas" className="block flex-1 relative w-full max-w-[400px] lg:max-w-[550px] h-[400px] lg:h-[550px] min-h-[400px] lg:min-h-[550px] group mx-auto mt-16 lg:mt-0">
+            <Link href="/descargar" className="block flex-1 relative w-full max-w-[400px] lg:max-w-[550px] h-[400px] lg:h-[550px] min-h-[400px] lg:min-h-[550px] group mx-auto mt-16 lg:mt-0">
                 <div className="absolute inset-0 bg-[#f39200]/25 blur-[120px] rounded-full group-hover:bg-[#f39200]/40 transition-all duration-1000 ease-out animate-pulse"></div>
                 <div className="absolute inset-0 transition-all duration-1000 ease-out transform-gpu group-hover:scale-110 group-hover:rotate-2 group-hover:-translate-y-4">
                     <Image
@@ -49,7 +50,7 @@ export default function Hero() {
                         priority
                     />
                 </div>
-            </a>
+            </Link>
         </section>
     );
 }

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Props {
     onOpenManifesto: () => void;
 }
@@ -12,12 +14,30 @@ export default function QuienesSomos({ onOpenManifesto }: Props) {
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="flex flex-col lg:flex-row gap-16 items-center lg:items-stretch">
                     <div className="flex-1 text-center lg:text-left relative flex flex-col justify-center">
-                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-white leading-[1.05] tracking-tight mb-10 drop-shadow-lg">
+                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-white leading-[1.05] tracking-tight mb-8 drop-shadow-lg">
                             Tecnología global.<br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f39200] via-orange-400 to-[#f39200]">
                                 Corazón cien por ciento salteño.
                             </span>
                         </h2>
+
+                        {/* Feature Image Block */}
+                        <div className="relative w-full max-w-lg mx-auto lg:mx-0 h-56 md:h-72 rounded-3xl overflow-hidden mb-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 group">
+                            <Image 
+                                src="/images/Tecnologia Global2.jpg" 
+                                alt="Tecnología Global en Salta" 
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                className="object-cover group-hover:scale-110 transition-transform duration-1000 ease-in-out opacity-80"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-tr from-[#1c355c]/80 via-transparent to-transparent"></div>
+                            <div className="absolute bottom-5 left-6">
+                                <span className="bg-[#f39200] text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(243,146,0,0.5)] border border-white/20">
+                                    Innovación & Desarrollo
+                                </span>
+                            </div>
+                        </div>
+
                         <div className="inline-block border-l-4 border-[#f39200] pl-8 py-3 mb-8 relative">
                             <div className="absolute -left-[4px] top-0 w-1 h-full bg-[#f39200] shadow-[0_0_15px_#f39200]"></div>
                             <p className="text-2xl md:text-3xl text-gray-300 font-light italic leading-snug">

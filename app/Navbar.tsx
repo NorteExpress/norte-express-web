@@ -20,16 +20,16 @@ export default function Navbar() {
                 <div className="hidden md:flex gap-10 items-center text-sm font-semibold tracking-wide text-gray-300">
                     <Link href="#servicios" className="hover:text-white transition-colors duration-500">Servicios</Link>
                     <Link href="#nosotros" className="hover:text-white transition-colors duration-500">Nosotros</Link>
-                    <Link href="#descargas" className="hover:text-white transition-colors duration-500">Descargas</Link>
+                    <Link href="/descargar" className="hover:text-white transition-colors duration-500">Descargas</Link>
                     <Link href="#contacto" className="hover:text-white transition-colors duration-500">Contacto</Link>
 
-                    <a
-                        href="#descargas"
+                    <Link
+                        href="/descargar"
                         className="relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white transition-all duration-500 bg-[#f39200]/90 rounded-full hover:bg-[#f39200] hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(243,146,0,0.5)] border border-[#f39200]/50 overflow-hidden group"
                     >
                         <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                         Pedir Envío
-                    </a>
+                    </Link>
                 </div>
             </div>
         </nav>

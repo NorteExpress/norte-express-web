@@ -50,3 +50,7 @@ Lee esto antes de proponer o modificar cualquier código:
 
 ### PASO 7: Footer Corporativo y Formulario de Contacto Temprano
 * **Tarea:** Cierre de la página con enlaces de interés, un diseño limpio y un llamado a la acción para descargar las apps (actualmente al 99% de desarrollo).
+
+### PASO 8: Hub de Descarga de APKs Directo
+* **Archivo a crear:** `app/descargar/page.tsx`
+* **Tarea:** Página dedicada con guía de instalación segura para distribuir la App Cliente y App Rider nativas de Android sin depender de tiendas de terceros, evitando comisiones y tiempos de revisión.
