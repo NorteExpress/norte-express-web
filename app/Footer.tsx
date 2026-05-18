@@ -30,6 +30,7 @@ export default function Footer() {
                         <ul className="space-y-4 text-gray-400 text-sm">
                             <li><Link href="#servicios" className="hover:text-[#f39200] hover:translate-x-1 inline-block transition-all duration-300">Ecosistema y Servicios</Link></li>
                             <li><Link href="#nosotros" className="hover:text-[#f39200] hover:translate-x-1 inline-block transition-all duration-300">Manifiesto Salteño</Link></li>
+                            <li><Link href="/privacidad" className="hover:text-[#f39200] hover:translate-x-1 inline-block transition-all duration-300">Políticas de Privacidad</Link></li>
                             <li><Link href="#contacto" className="hover:text-[#f39200] hover:translate-x-1 inline-block transition-all duration-300">Soporte y Contacto</Link></li>
                         </ul>
                     </div>
