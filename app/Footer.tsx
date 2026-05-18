@@ -102,7 +102,6 @@ export default function Footer() {
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-xs tracking-wider">
                     <p>&copy; {new Date().getFullYear()} N.O.R.T.E. Transporte Express. Todos los derechos reservados.</p>
                     <div className="flex gap-4">
-                        <span className="hover:text-white transition-colors cursor-pointer">Términos y Condiciones</span>
                         <Link href="/privacidad" className="hover:text-white transition-colors cursor-pointer">Políticas de Privacidad</Link>
                     </div>
                 </div>
