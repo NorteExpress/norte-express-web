@@ -22,6 +22,7 @@ export default function Navbar() {
                     <Link href="#nosotros" className="hover:text-white transition-colors duration-500">Nosotros</Link>
                     <Link href="/descargar" className="hover:text-white transition-colors duration-500">Descargas</Link>
                     <Link href="/privacidad" className="hover:text-white transition-colors duration-500">Privacidad</Link>
+                    <Link href="/terminos-y-condiciones" className="hover:text-white transition-colors duration-500">Términos</Link>
                     <Link href="#contacto" className="hover:text-white transition-colors duration-500">Contacto</Link>
 
                     <Link

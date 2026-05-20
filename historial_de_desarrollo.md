@@ -72,6 +72,7 @@
 - [x] **Integración de Imágenes de Marketing:** Se añadieron las 5 imágenes ilustrativas de los servicios en `app/TripleEntrada.tsx` integrándolas como banners dentro de cada tarjeta con diseño premium. Se incorporó la imagen `Tecnologia Global2.jpg` en la sección `app/QuienesSomos.tsx` como un bloque visual destacado que acompaña el manifiesto.
 - [x] **Migración de APK Comercio a Google Drive:** Se actualizó el enlace de descarga de *N.O.R.T.E. Comercio* en el Hub de Descargas (`app/descargar/page.tsx`) hacia un servidor externo, agregando atributos de seguridad (`target="_blank"`, `rel="noopener noreferrer"`) y actualizando sutilmente el texto descriptivo con el tamaño estimado (~109 MB).
 - [x] **Optimización de Rendimiento de Imágenes:** Se resolvió la advertencia de Next.js en `app/QuienesSomos.tsx` añadiendo la propiedad `sizes` a la imagen `Tecnologia Global2.jpg`, mejorando la carga y rendimiento de la página.
+- [x] **Términos y Condiciones:** Se implementó la ruta `/terminos-y-condiciones` con el texto legal correspondiente y se agregaron los accesos en el Navbar (cabecera) y Footer (tanto en el menú de navegación como en el copyright del pie de página).
 
 ---
 *Nota para el Agente: Al completar un paso, marca la casilla con una 'x', actualiza el 'Paso Activo' y añade una breve nota técnica si es necesario.*

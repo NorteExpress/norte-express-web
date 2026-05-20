@@ -31,6 +31,7 @@ export default function Footer() {
                             <li><Link href="#servicios" className="hover:text-[#f39200] hover:translate-x-1 inline-block transition-all duration-300">Ecosistema y Servicios</Link></li>
                             <li><Link href="#nosotros" className="hover:text-[#f39200] hover:translate-x-1 inline-block transition-all duration-300">Manifiesto Salteño</Link></li>
                             <li><Link href="/privacidad" className="hover:text-[#f39200] hover:translate-x-1 inline-block transition-all duration-300">Políticas de Privacidad</Link></li>
+                            <li><Link href="/terminos-y-condiciones" className="hover:text-[#f39200] hover:translate-x-1 inline-block transition-all duration-300">Términos y Condiciones</Link></li>
                             <li><Link href="#contacto" className="hover:text-[#f39200] hover:translate-x-1 inline-block transition-all duration-300">Soporte y Contacto</Link></li>
                         </ul>
                     </div>
@@ -103,6 +104,8 @@ export default function Footer() {
                     <p>&copy; {new Date().getFullYear()} N.O.R.T.E. Transporte Express. Todos los derechos reservados.</p>
                     <div className="flex gap-4">
                         <Link href="/privacidad" className="hover:text-white transition-colors cursor-pointer">Políticas de Privacidad</Link>
+                        <span>|</span>
+                        <Link href="/terminos-y-condiciones" className="hover:text-white transition-colors cursor-pointer">Términos y Condiciones</Link>
                     </div>
                 </div>
             </div>
