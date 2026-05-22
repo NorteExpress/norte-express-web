@@ -8,6 +8,7 @@
 * **Fecha de inicio:** Mayo 2026
 * **Estado Global:** Hub de Distribución Operativo (Listo para Producción).
 * **Paso Activo según Plan:** Despliegue en Vercel y vinculación del dominio norteexpress.com.ar.
+* **REGLA DE DESPLIEGUE (IMPORTANTE):** El flujo de despliegue es exclusivamente automático mediante la subida de cambios a la rama `main` en GitHub. Está prohibido usar comandos de Vercel CLI en la consola local para desplegar de forma directa.
 
 ---
 

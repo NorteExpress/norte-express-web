@@ -26,3 +26,10 @@
 * **Archivos Completos:** Queda **TERMINANTEMENTE PROHIBIDO** entregar fragmentos de código (snippets), instrucciones ambiguas como "inserta esto en la función" o dejar bloques incompletos con comentarios tipo `// el resto del código va aquí`.
 * **Mandato de Sobreescritura:** Cada vez que se requiera modificar un archivo, el agente **DEBE** entregar el código fuente completo desde la línea 1 hasta la final. La única instrucción válida que acompañe al código será: *"Borra todo el contenido de [nombre_archivo] y pega este código nuevo"*.
 * **Verificación Interna:** Antes de emitir la respuesta, verifica rigurosamente en tu árbol lógico que todas las etiquetas JSX, paréntesis y llaves `{}` estén cerradas de manera impecable.
+
+---
+
+## SKILL 4: Protocolo de Despliegue (CI/CD de GitHub + Vercel)
+* **Flujo de Despliegue Único:** El sitio oficial se actualiza exclusivamente mediante la rama `main` en GitHub.
+* **Prohibición de Despliegue Manual:** Queda **TERMINANTEMENTE PROHIBIDO** intentar desplegar de forma manual o utilizar la CLI de Vercel (`vercel`, `vercel --prod`, etc.).
+* **Procedimiento:** Cualquier cambio aprobado debe subirse haciendo commit y `git push origin main` al repositorio. Vercel detectará el empuje e iniciará el build automático de producción.
