@@ -27,11 +27,11 @@ export default function Descargas() {
                         <div className="flex flex-col items-center md:items-start text-center md:text-left flex-grow relative z-10">
                             <span className="inline-block px-4 py-1.5 rounded-full bg-[#f39200]/20 text-[#f39200] text-xs font-bold uppercase tracking-widest border border-[#f39200]/30 mb-4">App de Clientes</span>
                             <h3 className="text-3xl sm:text-4xl font-black text-white mb-4">N.O.R.T.E. Delivery</h3>
-                            <p className="text-gray-300 mb-8 text-lg leading-relaxed">Pedí lo que necesites, rastrealo en tiempo real y disfrutá de la logística más rápida del Norte Argentino directo desde tu celular.</p>
-                            <Link href="/descargar" className="w-full sm:w-auto bg-[#f39200] hover:bg-orange-500 text-white rounded-xl py-4 px-8 font-bold flex items-center justify-center gap-3 transition-transform hover:scale-105 shadow-lg shadow-orange-500/30 text-lg">
-                                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                                Ir a Descargar (Hub)
-                            </Link>
+                            <p className="text-gray-300 text-lg leading-relaxed mb-4">Pedí lo que necesites, rastrealo en tiempo real y disfrutá de la logística más rápida del Norte Argentino directo desde tu celular.</p>
+                            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#f39200] bg-[#f39200]/10 border border-[#f39200]/20 px-3.5 py-1.5 rounded-full mt-2">
+                                <span className="w-2 h-2 rounded-full bg-[#f39200] animate-pulse"></span>
+                                Próximamente en Google Play Store
+                            </span>
                         </div>
                     </div>
 
@@ -41,12 +41,9 @@ export default function Descargas() {
                         <div className="relative w-48 h-32 min-h-[8rem] mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
                             <Image src="/images/norte comercio.png" alt="App N.O.R.T.E. Comercios" fill sizes="192px" className="object-contain" />
                         </div>
+                        <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 text-gray-300 text-xs font-bold uppercase tracking-wider mb-4 border border-white/10">App de Comercio</span>
                         <h3 className="text-2xl font-bold text-white mb-4">Para tu Negocio</h3>
-                        <p className="text-gray-400 mb-8 flex-grow">Gestioná tus pedidos, visualizá reportes en tiempo real y solicitá cadetes con un solo toque.</p>
-                        <Link href="/descargar" className="w-full bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl py-3 px-4 font-bold flex items-center justify-center gap-2 transition-colors">
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                            Ir a Descargar (Hub)
-                        </Link>
+                        <p className="text-gray-400 leading-relaxed mb-2">Gestioná tus pedidos, visualizá reportes en tiempo real y solicitá cadetes con un solo toque.</p>
                     </div>
 
                     {/* Tarjeta App Cadete */}
@@ -55,19 +52,26 @@ export default function Descargas() {
                         <div className="relative w-48 h-32 min-h-[8rem] mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]">
                             <Image src="/images/Norte Cadete.png" alt="App N.O.R.T.E. Cadetes" fill sizes="192px" className="object-contain" />
                         </div>
+                        <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 text-gray-300 text-xs font-bold uppercase tracking-wider mb-4 border border-white/10">App de Cadete</span>
                         <h3 className="text-2xl font-bold text-white mb-4">Para vos (Rider)</h3>
-                        <p className="text-gray-400 mb-8 flex-grow">Recibí alertas de viajes cercanos, trazá las mejores rutas y controlá tus ganancias diarias.</p>
-                        <Link href="/descargar" className="w-full bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-xl py-3 px-4 font-bold flex items-center justify-center gap-2 transition-colors">
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                            Ir a Descargar (Hub)
-                        </Link>
+                        <p className="text-gray-400 leading-relaxed mb-2">Recibí alertas de viajes cercanos, trazá las mejores rutas y controlá tus ganancias diarias.</p>
                     </div>
                 </div>
 
-                <div className="mt-16 text-center">
-                    <span className="inline-block px-5 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm italic">
-                        * Archivos APK de instalación directa. Próximamente en tiendas oficiales.
-                    </span>
+                <div className="mt-20 flex flex-col items-center">
+                    <Link
+                        href="/descargar"
+                        className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white bg-gradient-to-r from-[#f39200] to-orange-500 rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-[0_0_35px_rgba(243,146,0,0.4)] overflow-hidden shadow-lg shadow-orange-500/20"
+                    >
+                        <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                        <svg className="w-6 h-6 mr-3 text-white transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                        Acceder al Centro de Descargas
+                    </Link>
+                    <p className="mt-4 text-sm text-gray-500 italic">
+                        * Accedé a los enlaces oficiales de descarga y guías de instalación.
+                    </p>
                 </div>
             </div>
         </section>
