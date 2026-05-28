@@ -84,7 +84,7 @@ export default function DescargarHub() {
                             Aplicaciones de Gestión y Trabajo
                         </h2>
                         <p className="text-lg text-white/70 max-w-2xl mx-auto">
-                            Instalá las aplicaciones para Cadetes y Comercios de forma directa y segura mediante archivos APK.
+                            Instalá las aplicaciones para Cadetes y Comercios de forma directa y segura mediante archivos APK y EXE.
                         </p>
                     </div>
 
@@ -98,17 +98,36 @@ export default function DescargarHub() {
                             <h3 className="text-2xl font-bold mb-2">N.O.R.T.E. Cadete</h3>
                             <span className="inline-block px-3 py-1 bg-[#f39200]/20 text-[#f39200] text-sm font-semibold rounded-full mb-4 w-fit border border-[#f39200]/30">App Rider</span>
                             <p className="text-base font-semibold text-white mb-2">Tu oficina es la ciudad.</p>
-                            <p className="text-white/70 mb-8 flex-grow text-sm leading-relaxed">
+                            <p className="text-white/70 mb-4 text-sm leading-relaxed">
                                 Conectate a la central logística. Recibe viajes optimizados por GPS, gestiona tus ganancias y accede a soporte vial S.O.S.
                             </p>
-                            <a
-                                href="/apks/norte-cadete.apk"
-                                download
-                                className="w-full py-4 rounded-xl font-bold text-white bg-[#f39200] hover:bg-[#e08600] shadow-[0_0_20px_rgba(243,146,0,0.3)] hover:shadow-[0_0_30px_rgba(243,146,0,0.5)] transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden"
-                            >
-                                <svg className="w-5 h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                                <span className="relative z-10">Descargar APK</span>
-                            </a>
+
+                            {/* Aclaración de Plataforma Android */}
+                            <div className="mb-6 p-3.5 rounded-xl bg-[#f39200]/10 border border-[#f39200]/20 flex items-start gap-2.5 mt-auto">
+                                <svg className="w-5 h-5 text-[#f39200] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <p className="text-xs text-orange-200/90 leading-normal">
+                                    <strong>Nota de compatibilidad:</strong> La aplicación de Cadetes es compatible con cualquier dispositivo <strong>Android (versión 6.0 o superior)</strong> con servicio de GPS activo.
+                                </p>
+                            </div>
+
+                            <div className="w-full mt-4">
+                                <a
+                                    href="/apks/norte-cadete.apk"
+                                    download
+                                    className="group relative w-full py-4 px-6 rounded-2xl font-bold text-white bg-gradient-to-r from-[#f39200] via-[#ffa827] to-[#f39200] bg-[length:200%_auto] hover:bg-[position:right_center] shadow-[0_4px_20px_rgba(243,146,0,0.35)] hover:shadow-[0_0_30px_rgba(243,146,0,0.6)] transition-all duration-500 flex items-center justify-center gap-3 overflow-hidden border border-white/10 hover:scale-[1.03] active:scale-[0.98] transform-gpu"
+                                >
+                                    {/* Sliding sheen shine */}
+                                    <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/35 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                                    
+                                    <svg className="w-6 h-6 relative z-10 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                    <div className="relative z-10 flex flex-col items-center sm:items-start text-center sm:text-left leading-tight">
+                                        <span className="block text-[9px] uppercase tracking-widest text-white/80 font-bold mb-0.5">Aplicación Oficial Android</span>
+                                        <span className="text-sm font-black tracking-wide">Descargar APK (Rider)</span>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
 
                         {/* Tarjeta 2: Comercio */}
@@ -125,7 +144,7 @@ export default function DescargarHub() {
                             </p>
                             
                             {/* Aclaración de Plataforma Android y PC */}
-                            <div className="mb-6 p-3.5 rounded-xl bg-[#f39200]/10 border border-[#f39200]/20 flex items-start gap-2.5">
+                            <div className="mb-6 p-3.5 rounded-xl bg-[#f39200]/10 border border-[#f39200]/20 flex items-start gap-2.5 mt-auto">
                                 <svg className="w-5 h-5 text-[#f39200] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -134,24 +153,36 @@ export default function DescargarHub() {
                                 </p>
                             </div>
 
-                            <div className="flex flex-col gap-3 w-full mt-auto">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mt-4">
                                 <a
                                     href="https://drive.google.com/uc?export=download&id=1K0ScR-Gp_Gtg70kPWQoPEoDofYUKT6ba"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-full py-4 rounded-xl font-bold text-white bg-[#f39200] hover:bg-[#e08600] shadow-[0_0_20px_rgba(243,146,0,0.3)] hover:shadow-[0_0_30px_rgba(243,146,0,0.5)] transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden text-center hover:scale-[1.02] transform-gpu"
+                                    className="group relative w-full py-4 px-4 rounded-2xl font-bold text-white bg-gradient-to-r from-[#f39200] via-[#ffa827] to-[#f39200] bg-[length:200%_auto] hover:bg-[position:right_center] shadow-[0_4px_20px_rgba(243,146,0,0.35)] hover:shadow-[0_0_30px_rgba(243,146,0,0.6)] transition-all duration-500 flex items-center justify-center gap-2.5 overflow-hidden border border-white/10 hover:scale-[1.03] active:scale-[0.98] transform-gpu"
                                 >
-                                    <svg className="w-5 h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                                    <span className="relative z-10">Descargar Android (APK)</span>
+                                    {/* Sliding sheen shine */}
+                                    <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/35 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                                    
+                                    <svg className="w-5.5 h-5.5 relative z-10 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                    <div className="relative z-10 flex flex-col items-start leading-tight">
+                                        <span className="block text-[8px] uppercase tracking-widest text-white/80 font-bold mb-0.5">Para Celular</span>
+                                        <span className="text-xs font-black tracking-wide">Android (APK)</span>
+                                    </div>
                                 </a>
                                 <a
                                     href="https://drive.google.com/uc?export=download&id=1ql2b2JP9wa4gpwpNGxtzGf202_ei9m-0"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-full py-4 rounded-xl font-bold text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#f39200]/50 shadow-[0_0_15px_rgba(255,255,255,0.02)] hover:shadow-[0_0_25px_rgba(243,146,0,0.2)] transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden text-center hover:scale-[1.02] transform-gpu"
+                                    className="group relative w-full py-4 px-4 rounded-2xl font-bold text-white bg-gradient-to-br from-[#1b3152] to-[#10223b] hover:from-[#213b63] hover:to-[#142c4c] shadow-[0_4px_15px_rgba(0,0,0,0.3)] hover:shadow-[0_0_25px_rgba(243,146,0,0.35)] transition-all duration-500 flex items-center justify-center gap-2.5 overflow-hidden border border-[#f39200]/30 hover:border-[#f39200] hover:scale-[1.03] active:scale-[0.98] transform-gpu"
                                 >
-                                    <svg className="w-5 h-5 relative z-10 text-[#f39200]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                                    <span className="relative z-10">Descargar PC (Windows)</span>
+                                    {/* Sliding sheen shine */}
+                                    <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                                    
+                                    <svg className="w-5.5 h-5.5 relative z-10 text-[#f39200] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                    <div className="relative z-10 flex flex-col items-start leading-tight">
+                                        <span className="block text-[8px] uppercase tracking-widest text-[#f39200]/80 font-bold mb-0.5">Para PC / Windows</span>
+                                        <span className="text-xs font-black tracking-wide text-white">Windows (EXE)</span>
+                                    </div>
                                 </a>
                             </div>
                         </div>

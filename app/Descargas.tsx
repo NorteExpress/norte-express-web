@@ -61,13 +61,15 @@ export default function Descargas() {
                 <div className="mt-20 flex flex-col items-center">
                     <Link
                         href="/descargar"
-                        className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white bg-gradient-to-r from-[#f39200] to-orange-500 rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-[0_0_35px_rgba(243,146,0,0.4)] overflow-hidden shadow-lg shadow-orange-500/20"
+                        className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white bg-gradient-to-r from-[#f39200] via-[#ffa827] to-[#f39200] bg-[length:200%_auto] hover:bg-[position:right_center] rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-[0_0_35px_rgba(243,146,0,0.5)] overflow-hidden shadow-lg shadow-orange-500/20 border border-white/10 transform-gpu"
                     >
-                        <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                        <svg className="w-6 h-6 mr-3 text-white transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        {/* Sliding sheen shine */}
+                        <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                        
+                        <svg className="w-6 h-6 mr-3 text-white transition-transform group-hover:translate-x-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
-                        Acceder al Centro de Descargas
+                        <span className="relative z-10">Acceder al Centro de Descargas</span>
                     </Link>
                     <p className="mt-4 text-sm text-gray-500 italic">
                         * Accedé a los enlaces oficiales de descarga y guías de instalación.

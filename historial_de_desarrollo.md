@@ -25,10 +25,6 @@
 - [x] **PASO 6:** Social Proof. *(Completado: creado componente SocialProof destacando el orgullo salteño)*
 - [x] **PASO 7:** Footer. *(Completado: creado componente Footer con formulario de contacto)*
 - [x] **Integración Final:** Se ensamblaron todos los componentes en `app/page.tsx`.
-
----
-
-## Fase 2: Refinamiento
 - [x] Corrección de importaciones en `app/page.tsx`.
 - [x] Integración de logos reales (`logo-app.png` y `logo-principal.png`) en Navbar y Footer.
 - [x] **REVOLUCIÓN VISUAL (Fase 3):** Se reescribió `app/page.tsx` desde cero como un archivo consolidado para lograr un impacto visual inmersivo ("Efecto WoooW").
@@ -49,7 +45,7 @@
 - [x] **Ajuste de Logos y Proporciones:** Se corrigió el desbordamiento del logo oficial en el Navbar y Footer mediante contenedores relativos, y se hizo el logo secundario (app) flotante del Hero mucho más pequeño y delicado.
 - [x] **Conexión a WhatsApp:** Se conectaron los botones principales (Navbar, Hero, Triple Entrada) a la API de WhatsApp con mensajes predefinidos personalizados según la intención del usuario.
 - [x] **Rediseño del Hero:** Se centró todo el contenido principal del Hero Section eliminando el espacio vacío de la derecha, logrando una composición majestuosa y equilibrada.
- - [x] **Ecosistema Premium:** Se rediseñó por completo la sección de servicios (Triple Entrada), escalándola a un grid de 5 tarjetas interactivas con nuevo copywriting premium y botones de WhatsApp dedicados para cada unidad de negocio.
+- [x] **Ecosistema Premium:** Se rediseñaron por completo las tarjetas de servicios (Triple Entrada), escalándolas a un grid de 5 tarjetas interactivas con nuevo copywriting premium y botones de WhatsApp dedicados para cada unidad de negocio.
 - [x] **Estadísticas en Tiempo Real (Realismo):** Se ajustó la lógica del SocialProof: Envíos y Comercios suben hacia el infinito a distinta velocidad, y Riders fluctúa realistamente entre 80 y 120 (conexiones/desconexiones).
 - [x] **Fondo Dinámico Inmersivo:** Se implementó un carrusel de transición suave (`fade`) en el fondo del Hero mezclando dos videos (`istockphoto...mp4`, `Salta1.webm`) y tres imágenes de Salta (`salta1.jpg`, `Salta2.jpg`, `Salta3.jpg`) para resaltar la identidad local de forma cinematográfica.
 - [x] **Refinamiento de Copywriting:** Se actualizó el texto del Hero para eliminar terminología interna y mantener un tono 100% profesional y corporativo.
@@ -57,30 +53,29 @@
 - [x] **Identidad Visual de Apps:** Se actualizaron las tarjetas de la sección "Descargas", reemplazando los íconos genéricos por los logotipos oficiales en alta calidad flotantes (`norte comercio.png` y `Norte Cadete.png`).
 - [x] **Consolidación de Logotipos:** Se actualizaron todas las rutas para usar los nombres de archivo finales (`Logo Norte.png` y `Norte Delivery.png`). Se restauró el logotipo de la App en el Hero Section con un diseño asimétrico de gran tamaño y efectos de iluminación pulsante para destacar la aplicación principal.
 - [x] **Limpieza de Código:** Se eliminaron los archivos obsoletos de la carpeta raíz (`TripleEntrada.tsx`, `Hero.tsx`, `Navbar.tsx`, `Footer.tsx` y `SocialProof.tsx`) para mantener el espacio de trabajo limpio y evitar confusiones.
-- [x] **Corrección de Renderizado Next.js Image:** Se aplicaron clases `min-h-*` y ajustes a posicionamiento absoluto en los contenedores de imágenes en `Hero`, `Descargas`, `Navbar` y `Footer` para prevenir que Next.js lance advertencias de `height value of 0` provocadas por colapsos momentáneos en layouts Flexbox.
-- [x] **Destacar App de Delivery en Descargas:** Se integró el logotipo oficial de `Norte Delivery.png` como la tarjeta principal y más grande de la sección Descargas. Se reemplazaron los botones de tiendas (Play/App Store) por botones de "Descarga Directa (APK)" unificados.
-- [x] **Transición a Modelo 100% App:** Se eliminaron todos los enlaces a la API de WhatsApp y referencias a números telefónicos en Navbar, Hero, Triple Entrada y Footer. Ahora todos los llamados a la acción (Call to Action) redirigen de forma fluida a la sección de Descargas (`#descargas`).
-- [x] **Teaser Bolsa de Trabajo:** Se agregó una leyenda sutil en el pie de página ("Próximamente: Oportunidades Laborales") para anticipar el futuro servicio de contrataciones para comercios afiliados.
-- [x] **Interactividad del Logo Hero:** Se transformó el logotipo flotante de "Norte Delivery" del Hero en un enlace interactivo para redirigir directamente a la sección de descargas.
-- [x] **Visibilidad de Guarda Salteña:** Se aumentó significativamente la opacidad del patrón regional en `SocialProof.tsx` y se utilizaron fondos cristalinos en las tarjetas para que la identidad de Salta destaque correctamente de fondo.
-- [x] **Optimización de Renderizado (Scroll Fix):** Se cambió la posición del contenedor de fondos dinámicos en `page.tsx` de `absolute` a `fixed h-screen`. Esto evita que el navegador intente estirar los videos al alto total de la página, resolviendo el colapso de la memoria GPU que dejaba la pantalla en blanco, generaba espacios muertos y bloqueaba el scroll.
-- [x] **Preparación de Assets y Dominio:** Se limpiaron assets innecesarios (videos borrados) y se inició la planificación para la vinculación del dominio `.com.ar` y correos corporativos.
-- [x] **Hub de Descarga Directa:** Se implementó exitosamente la ruta `/descargar` con tarjetas premium para la distribución de los instaladores (`norte-cliente.apk` y `norte-rider.apk`), incluyendo una guía de instalación segura paso a paso para Android.
-- [x] **Rediseño Premium del Hub de Descargas:** Se reescribió `app/descargar/page.tsx` con un diseño en grid (3 tarjetas Glassmorphism) que incluye *N.O.R.T.E. Delivery*, *N.O.R.T.E. Cadete* y *N.O.R.T.E. Comercio*, y se reestructuró la Guía de Instalación Segura con la paleta de colores oficial.
-- [x] **Tutorial de Confianza Visual:** Se integraron las imágenes `tuto-web.png` y `Tuto-celular.png` antes de los enlaces de descarga en `/descargar` de forma responsive para aumentar la confianza y seguridad del usuario.
-- [x] **Unificación de Enlaces de Descarga al Hub:** Se modificaron todos los componentes (Navbar, Hero, TripleEntrada, Descargas) para que los botones y enlaces de descarga apunten directamente a la ruta `/descargar` (Hub de Descargas) en lugar de realizar descargas directas (`.apk`) o navegar a la sección anclada (`#descargas`). Se usó estrictamente el componente `<Link>` de Next.js.
-- [x] **Persistencia de Audio Global:** Se extrajo toda la lógica de audio y el reproductor flotante del archivo `app/page.tsx` y se creó un nuevo componente `AudioPlayer.tsx`. Este fue integrado en `app/layout.tsx` para garantizar que la música no se corte al navegar entre la landing page y el Hub de Descargas.
-- [x] **Integración de Imágenes de Marketing:** Se añadieron las 5 imágenes ilustrativas de los servicios en `app/TripleEntrada.tsx` integrándolas como banners dentro de cada tarjeta con diseño premium. Se incorporó la imagen `Tecnologia Global2.jpg` en la sección `app/QuienesSomos.tsx` como un bloque visual destacado que acompaña el manifiesto.
-- [x] **Migración de APK Comercio a Google Drive:** Se actualizó el enlace de descarga de *N.O.R.T.E. Comercio* en el Hub de Descargas (`app/descargar/page.tsx`) hacia un servidor externo, agregando atributos de seguridad (`target="_blank"`, `rel="noopener noreferrer"`) y actualizando sutilmente el texto descriptivo con el tamaño estimado (~109 MB).
-- [x] **Optimización de Rendimiento de Imágenes:** Se resolvió la advertencia de Next.js en `app/QuienesSomos.tsx` añadiendo la propiedad `sizes` a la imagen `Tecnologia Global2.jpg`, mejorando la carga y rendimiento de la página.
-- [x] **Términos y Condiciones:** Se implementó la ruta `/terminos-y-condiciones` con el texto legal correspondiente y se agregaron los accesos en el Navbar (cabecera) y Footer (tanto en el menú de navegación como en el copyright del pie de página).
-- [x] **Verificación de Tutorial y Despliegue:** Se confirmó que el paso 1 de la guía visual en la página de descargas muestra correctamente "norte-cadete.apk". Se realizó un build de prueba local exitoso y se verificó que el repositorio local está al día con la rama remota `main` en GitHub, disparando el despliegue automático en la página oficial.
+- [x] **Corrección de Renderizado Next.js Image:** Se aplicaron clases `min-h-*` y acoplamientos absolutos en los contenedores de imágenes en `Hero`, `Descargas`, `Navbar` y `Footer` para prevenir advertencias de Next.js.
+- [x] **Destacar App de Delivery en Descargas:** Se integró el logotipo oficial de `Norte Delivery.png` como la tarjeta principal de la sección Descargas. Se reemplazaron los botones de tiendas por botones de "Descarga Directa (APK)" unificados.
+- [x] **Transición a Modelo 100% App:** Se eliminaron los enlaces a WhatsApp y referencias telefónicas. Todos los llamados a la acción (Call to Action) redirigen fluidamente a la sección de Descargas (`#descargas`).
+- [x] **Teaser Bolsa de Trabajo:** Se agregó una leyenda en el pie de página ("Próximamente: Oportunidades Laborales").
+- [x] **Interactividad del Logo Hero:** Se transformó el logotipo flotante de "Norte Delivery" del Hero en un enlace interactivo para redirigir a la sección de descargas.
+- [x] **Visibilidad de Guarda Salteña:** Se aumentó la opacidad del patrón regional en `SocialProof.tsx`.
+- [x] **Optimización de Renderizado (Scroll Fix):** Se cambió la posición del contenedor de fondos dinámicos en `page.tsx` de `absolute` a `fixed h-screen` para corregir bloqueos del scroll en GPUs móviles.
+- [x] **Hub de Descarga Directa:** Se implementó la ruta `/descargar` con tarjetas premium para la distribución de los instaladores (`norte-cliente.apk` y `norte-rider.apk`), con guía paso a paso.
+- [x] **Rediseño Premium del Hub de Descargas:** Se reescribió `app/descargar/page.tsx` con un diseño en grid de 3 tarjetas.
+- [x] **Tutorial de Confianza Visual:** Se integraron las imágenes `tuto-web.png` y `Tuto-celular.png` antes de los enlaces de descarga.
+- [x] **Unificación de Enlaces de Descarga al Hub:** Se modificaron todos los componentes para que apunten a `/descargar` con `<Link>`.
+- [x] **Persistencia de Audio Global:** Se extrajo el reproductor a `AudioPlayer.tsx` y se integró en `app/layout.tsx`.
+- [x] **Integración de Imágenes de Marketing:** Se añadieron las imágenes ilustrativas de servicios y manifiesto.
+- [x] **Migración de APK Comercio a Google Drive:** Se actualizó el enlace de descarga de *N.O.R.T.E. Comercio* a un servidor externo.
+- [x] **Términos y Condiciones:** Se implementó la ruta `/terminos-y-condiciones` con accesos en Navbar y Footer.
 - [x] **Actualización de N.O.R.T.E. Comercio y Logo Oficial de Play Store:**
-  - Se descargaron los recursos originales de Google Play Store en español e inglés (`google-play-badge.png` y `google-play-badge-en.png`) para usarlos directamente en el Hub de Descargas.
-  - Se reemplazó la caja SVG genérica de Play Store por el badge oficial en escala de grises con transición suave al pasar el mouse.
-  - Se actualizó el enlace de descarga para Android de N.O.R.T.E. Comercio con el nuevo ID de Google Drive (`1K0ScR-Gp_Gtg70kPWQoPEoDofYUKT6ba`).
-  - Se migró el enlace de descarga de la versión de PC de N.O.R.T.E. Comercio a Google Drive (`1ql2b2JP9wa4gpwpNGxtzGf202_ei9m-0`) para evitar advertencias de seguridad de navegadores, y se reacomodaron los botones en una pila vertical uniforme y premium.
-  - Se modificó la nota de compatibilidad del Comercio para indicar que ya cuenta con soporte oficial para Android y Windows PC.
+  - Se incorporó el badge oficial de Google Play Store en el Hub de Descargas con efecto grayscale.
+  - Se actualizaron los enlaces de Android e Windows PC de Comercio a Google Drive.
+- [x] **Rediseño Premium de Botones y Simetría de Layout (Fase 4):**
+  - Se rediseñaron todos los botones de descarga incorporando doble línea de texto (Acción superior + Título destacado) y animación deslizable de brillo de luz ("shine effect") en hover.
+  - Se reorganizó la disposición de los botones en Comercio, de pila vertical a grilla responsiva de dos columnas en pantallas de escritorio (`grid-cols-1 sm:grid-cols-2`).
+  - Se incorporó una nota de compatibilidad en la tarjeta de Cadete para equiparar la estructura y balancear visualmente la altura de ambas tarjetas.
+  - Se añadió el efecto premium de destello de luz y glow dorado al botón de acceso a descargas en la Landing Page (`app/Descargas.tsx`).
 
 ---
 *Nota para el Agente: Al completar un paso, marca la casilla con una 'x', actualiza el 'Paso Activo' y añade una breve nota técnica si es necesario.*
