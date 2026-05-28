@@ -134,20 +134,21 @@ export default function DescargarHub() {
                                 </p>
                             </div>
 
-                            <div className="flex flex-col sm:flex-row gap-4 mt-auto">
+                            <div className="flex flex-col gap-3 w-full mt-auto">
                                 <a
                                     href="https://drive.google.com/uc?export=download&id=1K0ScR-Gp_Gtg70kPWQoPEoDofYUKT6ba"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex-1 py-4 rounded-xl font-bold text-white bg-[#f39200] hover:bg-[#e08600] shadow-[0_0_20px_rgba(243,146,0,0.3)] hover:shadow-[0_0_30px_rgba(243,146,0,0.5)] transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden text-center text-sm"
+                                    className="w-full py-4 rounded-xl font-bold text-white bg-[#f39200] hover:bg-[#e08600] shadow-[0_0_20px_rgba(243,146,0,0.3)] hover:shadow-[0_0_30px_rgba(243,146,0,0.5)] transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden text-center hover:scale-[1.02] transform-gpu"
                                 >
                                     <svg className="w-5 h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                                     <span className="relative z-10">Descargar Android (APK)</span>
                                 </a>
                                 <a
-                                    href="/apks/norte-comercio.exe"
-                                    download
-                                    className="flex-1 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 border border-white/10 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden text-center text-sm"
+                                    href="https://drive.google.com/uc?export=download&id=1ql2b2JP9wa4gpwpNGxtzGf202_ei9m-0"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full py-4 rounded-xl font-bold text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#f39200]/50 shadow-[0_0_15px_rgba(255,255,255,0.02)] hover:shadow-[0_0_25px_rgba(243,146,0,0.2)] transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden text-center hover:scale-[1.02] transform-gpu"
                                 >
                                     <svg className="w-5 h-5 relative z-10 text-[#f39200]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                                     <span className="relative z-10">Descargar PC (Windows)</span>

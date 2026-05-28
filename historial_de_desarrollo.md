@@ -79,7 +79,7 @@
   - Se descargaron los recursos originales de Google Play Store en español e inglés (`google-play-badge.png` y `google-play-badge-en.png`) para usarlos directamente en el Hub de Descargas.
   - Se reemplazó la caja SVG genérica de Play Store por el badge oficial en escala de grises con transición suave al pasar el mouse.
   - Se actualizó el enlace de descarga para Android de N.O.R.T.E. Comercio con el nuevo ID de Google Drive (`1K0ScR-Gp_Gtg70kPWQoPEoDofYUKT6ba`).
-  - Se agregó el botón para descargar la versión de PC de N.O.R.T.E. Comercio apuntando al archivo ejecutable local (`/apks/norte-comercio.exe`).
+  - Se migró el enlace de descarga de la versión de PC de N.O.R.T.E. Comercio a Google Drive (`1ql2b2JP9wa4gpwpNGxtzGf202_ei9m-0`) para evitar advertencias de seguridad de navegadores, y se reacomodaron los botones en una pila vertical uniforme y premium.
   - Se modificó la nota de compatibilidad del Comercio para indicar que ya cuenta con soporte oficial para Android y Windows PC.
 
 ---
