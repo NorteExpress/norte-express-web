@@ -75,6 +75,12 @@
 - [x] **Optimización de Rendimiento de Imágenes:** Se resolvió la advertencia de Next.js en `app/QuienesSomos.tsx` añadiendo la propiedad `sizes` a la imagen `Tecnologia Global2.jpg`, mejorando la carga y rendimiento de la página.
 - [x] **Términos y Condiciones:** Se implementó la ruta `/terminos-y-condiciones` con el texto legal correspondiente y se agregaron los accesos en el Navbar (cabecera) y Footer (tanto en el menú de navegación como en el copyright del pie de página).
 - [x] **Verificación de Tutorial y Despliegue:** Se confirmó que el paso 1 de la guía visual en la página de descargas muestra correctamente "norte-cadete.apk". Se realizó un build de prueba local exitoso y se verificó que el repositorio local está al día con la rama remota `main` en GitHub, disparando el despliegue automático en la página oficial.
+- [x] **Actualización de N.O.R.T.E. Comercio y Logo Oficial de Play Store:**
+  - Se descargaron los recursos originales de Google Play Store en español e inglés (`google-play-badge.png` y `google-play-badge-en.png`) para usarlos directamente en el Hub de Descargas.
+  - Se reemplazó la caja SVG genérica de Play Store por el badge oficial en escala de grises con transición suave al pasar el mouse.
+  - Se actualizó el enlace de descarga para Android de N.O.R.T.E. Comercio con el nuevo ID de Google Drive (`1K0ScR-Gp_Gtg70kPWQoPEoDofYUKT6ba`).
+  - Se agregó el botón para descargar la versión de PC de N.O.R.T.E. Comercio apuntando al archivo ejecutable local (`/apks/norte-comercio.exe`).
+  - Se modificó la nota de compatibilidad del Comercio para indicar que ya cuenta con soporte oficial para Android y Windows PC.
 
 ---
 *Nota para el Agente: Al completar un paso, marca la casilla con una 'x', actualiza el 'Paso Activo' y añade una breve nota técnica si es necesario.*

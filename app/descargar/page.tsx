@@ -16,7 +16,7 @@ export default function DescargarHub() {
                     Volver al inicio
                 </Link>
             </div>
-            <div className="max-w-6xl mx-auto px-6 py-12">
+            <div className="max-w-6xl mx-auto px-6 py-12">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-lg">
                         Hub de <span className="text-[#f39200]">Descargas</span>
@@ -40,7 +40,7 @@ export default function DescargarHub() {
                                     sizes="(max-width: 768px) 160px, 224px" 
                                     className="object-contain" 
                                     priority 
-                                />
+                                  />
                             </div>
                             
                             {/* Información y Play Store Coming Soon */}
@@ -52,26 +52,25 @@ export default function DescargarHub() {
                                 </p>
                                 
                                 {/* Play Store Container */}
-                                <div className="w-full sm:w-auto bg-[#0a1120] border border-white/10 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 relative overflow-hidden group/store">
+                                <div className="w-full sm:w-auto bg-[#0a1120] border border-white/10 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-6 relative overflow-hidden group/store">
                                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-50"></div>
-                                    <div className="flex items-center gap-4 relative z-10 shrink-0">
-                                        <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center border border-white/10">
-                                            <svg className="w-6 h-6" viewBox="0 0 512 512" fill="none">
-                                                <path fill="#00b0ff" d="M12 28.527v454.946c0 10.976 6.002 21.05 15.65 26.331L264.44 256.006 27.65 2.196C18.002 7.477 12 17.55 12 28.527z"/>
-                                                <path fill="#00e575" d="M380.706 142.164L264.44 256.006l116.266 113.842c13.784-7.564 23.294-22.062 23.294-38.842V181c0-16.78-9.51-31.278-23.294-38.836z"/>
-                                                <path fill="#ff3d00" d="M264.44 256.006L27.65 2.196c-4.322 2.37-7.854 6.012-10.354 10.45l247.144 243.36z"/>
-                                                <path fill="#ffb300" d="M264.44 256.006l-230.144 226.46c2.5 4.438 6.032 8.08 10.354 10.45l230.144-230.144z"/>
-                                            </svg>
-                                        </div>
-                                        <div className="text-left">
-                                            <span className="block text-[9px] text-gray-400 font-bold uppercase tracking-widest leading-none mb-1">Próximamente en</span>
-                                            <span className="block text-xl font-extrabold text-white leading-none tracking-tight">Google Play</span>
+                                    <div className="relative z-10 shrink-0 flex items-center justify-center">
+                                        <div className="relative w-[135px] h-[40px] transition-transform duration-300 group-hover/store:scale-105">
+                                            <Image 
+                                                src="/images/google-play-badge.png" 
+                                                alt="Disponible en Google Play" 
+                                                fill 
+                                                className="object-contain filter grayscale opacity-75 group-hover/store:grayscale-0 group-hover/store:opacity-100 transition-all duration-500"
+                                            />
                                         </div>
                                     </div>
                                     <div className="h-px w-full sm:h-8 sm:w-px bg-white/10 shrink-0 relative z-10"></div>
-                                    <p className="text-xs text-white/70 leading-relaxed text-center sm:text-left relative z-10 max-w-[280px]">
-                                        Disponible muy pronto para descarga directa y segura desde la Play Store oficial.
-                                    </p>
+                                    <div className="relative z-10 flex flex-col items-center sm:items-start text-center sm:text-left">
+                                        <span className="block text-[9px] text-[#f39200] font-bold uppercase tracking-widest leading-none mb-1">Próximamente en</span>
+                                        <p className="text-xs text-white/70 leading-relaxed max-w-[280px]">
+                                            Disponible muy pronto para descarga directa y segura desde la Play Store oficial.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -119,31 +118,41 @@ export default function DescargarHub() {
                                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                             </div>
                             <h3 className="text-2xl font-bold mb-2">N.O.R.T.E. Comercio</h3>
-                            <span className="inline-block px-3 py-1 bg-[#f39200]/20 text-[#f39200] text-sm font-semibold rounded-full mb-4 w-fit border border-[#f39200]/30">App Negocios | Drive (~109 MB)</span>
+                            <span className="inline-block px-3 py-1 bg-[#f39200]/20 text-[#f39200] text-sm font-semibold rounded-full mb-4 w-fit border border-[#f39200]/30">App Negocios | Android & PC</span>
                             <p className="text-base font-semibold text-white mb-2">Potenciá tus ventas al 100%.</p>
                             <p className="text-white/70 mb-4 text-sm leading-relaxed">
                                 La suite definitiva para tu local. Gestioná tu stock, recibí pedidos y despachá con nuestra flota con 0% de comisión.
                             </p>
                             
-                            {/* Aclaración de Plataforma Android y Futura de PC */}
+                            {/* Aclaración de Plataforma Android y PC */}
                             <div className="mb-6 p-3.5 rounded-xl bg-[#f39200]/10 border border-[#f39200]/20 flex items-start gap-2.5">
                                 <svg className="w-5 h-5 text-[#f39200] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                                 <p className="text-xs text-orange-200/90 leading-normal">
-                                    <strong>Nota de compatibilidad:</strong> Por el momento, la aplicación de Comercios funciona exclusivamente en dispositivos Android. Próximamente estará disponible la versión nativa para PC de escritorio.
+                                    <strong>Nota de compatibilidad:</strong> La aplicación de Comercios ahora cuenta con versión oficial tanto para dispositivos móviles <strong>Android</strong> como para computadoras <strong>Windows (PC)</strong>.
                                 </p>
                             </div>
 
-                            <a
-                                href="https://drive.google.com/uc?export=download&id=1gIKlJMrW27iel_ZLv66VBE8K_sGNaCeQ"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-full py-4 rounded-xl font-bold text-white bg-[#f39200] hover:bg-[#e08600] shadow-[0_0_20px_rgba(243,146,0,0.3)] hover:shadow-[0_0_30px_rgba(243,146,0,0.5)] transition-all duration-300 flex items-center justify-center gap-2 mt-auto relative overflow-hidden"
-                            >
-                                <svg className="w-5 h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                                <span className="relative z-10">Descargar APK</span>
-                            </a>
+                            <div className="flex flex-col sm:flex-row gap-4 mt-auto">
+                                <a
+                                    href="https://drive.google.com/uc?export=download&id=1K0ScR-Gp_Gtg70kPWQoPEoDofYUKT6ba"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1 py-4 rounded-xl font-bold text-white bg-[#f39200] hover:bg-[#e08600] shadow-[0_0_20px_rgba(243,146,0,0.3)] hover:shadow-[0_0_30px_rgba(243,146,0,0.5)] transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden text-center text-sm"
+                                >
+                                    <svg className="w-5 h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                    <span className="relative z-10">Descargar Android (APK)</span>
+                                </a>
+                                <a
+                                    href="/apks/norte-comercio.exe"
+                                    download
+                                    className="flex-1 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 border border-white/10 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden text-center text-sm"
+                                >
+                                    <svg className="w-5 h-5 relative z-10 text-[#f39200]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                    <span className="relative z-10">Descargar PC (Windows)</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
