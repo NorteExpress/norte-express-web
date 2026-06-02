@@ -10,10 +10,10 @@ export default function Descargas() {
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight">
-                        Llevá N.O.R.T.E. en tu <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f39200] to-orange-400">bolsillo</span>
+                        El Ecosistema en tu <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f39200] to-orange-400">celular</span>
                     </h2>
                     <p className="text-xl md:text-2xl text-gray-400 font-light max-w-3xl mx-auto">
-                        Descargá nuestras aplicaciones móviles diseñadas a medida para optimizar tu tiempo y potenciar tus ingresos.
+                        Conocé las aplicaciones móviles oficiales diseñadas a medida para conectar, gestionar y potenciar la provincia de Salta.
                     </p>
                 </div>
 
@@ -27,10 +27,10 @@ export default function Descargas() {
                         <div className="flex flex-col items-center md:items-start text-center md:text-left flex-grow relative z-10">
                             <span className="inline-block px-4 py-1.5 rounded-full bg-[#f39200]/20 text-[#f39200] text-xs font-bold uppercase tracking-widest border border-[#f39200]/30 mb-4">App de Clientes</span>
                             <h3 className="text-3xl sm:text-4xl font-black text-white mb-4">N.O.R.T.E. Delivery</h3>
-                            <p className="text-gray-300 text-lg leading-relaxed mb-4">Pedí lo que necesites, rastrealo en tiempo real y disfrutá de la logística más rápida del Norte Argentino directo desde tu celular.</p>
+                            <p className="text-gray-300 text-lg leading-relaxed mb-4">Pedí lo que necesites, realizá envíos, solicitá asistencia vial SOS y accedé a profesionales verificados en Salta, directo desde tu celular.</p>
                             <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#f39200] bg-[#f39200]/10 border border-[#f39200]/20 px-3.5 py-1.5 rounded-full mt-2">
                                 <span className="w-2 h-2 rounded-full bg-[#f39200] animate-pulse"></span>
-                                Próximamente en Google Play Store
+                                Próximamente disponible en Google Play & App Store
                             </span>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ export default function Descargas() {
                         </div>
                         <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 text-gray-300 text-xs font-bold uppercase tracking-wider mb-4 border border-white/10">App de Comercio</span>
                         <h3 className="text-2xl font-bold text-white mb-4">Para tu Negocio</h3>
-                        <p className="text-gray-400 leading-relaxed mb-2">Gestioná tus pedidos, visualizá reportes en tiempo real y solicitá cadetes con un solo toque.</p>
+                        <p className="text-gray-400 leading-relaxed mb-2">Gestioná tus pedidos, despachá de forma inmediata sin comisiones de intermediación y visualizá reportes de ventas.</p>
                     </div>
 
                     {/* Tarjeta App Cadete */}
@@ -54,7 +54,7 @@ export default function Descargas() {
                         </div>
                         <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 text-gray-300 text-xs font-bold uppercase tracking-wider mb-4 border border-white/10">App de Cadete</span>
                         <h3 className="text-2xl font-bold text-white mb-4">Para vos (Rider)</h3>
-                        <p className="text-gray-400 leading-relaxed mb-2">Recibí alertas de viajes cercanos, trazá las mejores rutas y controlá tus ganancias diarias.</p>
+                        <p className="text-gray-400 leading-relaxed mb-2">Recibí alertas de entregas optimizadas por cercanía y GPS, controlá tus ganancias y manejá tus propios horarios.</p>
                     </div>
                 </div>
 
@@ -69,10 +69,10 @@ export default function Descargas() {
                         <svg className="w-6 h-6 mr-3 text-white transition-transform group-hover:translate-x-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
-                        <span className="relative z-10">Acceder al Centro de Descargas</span>
+                        <span className="relative z-10">Ir a la Sección de Descargas</span>
                     </Link>
                     <p className="mt-4 text-sm text-gray-500 italic">
-                        * Accedé a los enlaces oficiales de descarga y guías de instalación.
+                        * Accedé a los enlaces de descarga oficiales para Comercios y Cadetes y a la guía de instalación.
                     </p>
                 </div>
             </div>

@@ -21,7 +21,7 @@ export default function DescargarHub() {
                     <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-lg">
                         Hub de <span className="text-[#f39200]">Descargas</span>
                     </h1>
-                    <p className="text-xl text-white/80 max-w-2xl mx-auto">
+                    <p className="text-xl text-white/80 max-w-2xl mx-auto font-light">
                         Elegí la aplicación que necesitás para sumarte a la revolución logística del norte.
                     </p>
                 </div>
@@ -44,32 +44,50 @@ export default function DescargarHub() {
                             </div>
                             
                             {/* Información y Play Store Coming Soon */}
-                            <div className="flex flex-col items-center md:items-start text-center md:text-left flex-grow">
+                            <div className="flex flex-col items-center md:items-start text-center md:text-left flex-grow w-full">
                                 <span className="inline-block px-4 py-1.5 rounded-full bg-[#f39200]/20 text-[#f39200] text-xs font-bold uppercase tracking-widest border border-[#f39200]/30 mb-4">Aplicación para Clientes</span>
                                 <h2 className="text-3xl md:text-4xl font-black text-white mb-4">N.O.R.T.E. Delivery</h2>
-                                <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
+                                <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
                                     Pedí envíos al instante, explorá tiendas locales, contratá profesionales verificados y accedé a auxilio S.O.S. todo desde tu celular.
                                 </p>
                                 
-                                {/* Play Store Container */}
-                                <div className="w-full sm:w-auto bg-[#0a1120] border border-white/10 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-6 relative overflow-hidden group/store">
-                                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-50"></div>
-                                    <div className="relative z-10 shrink-0 flex items-center justify-center">
-                                        <div className="relative w-[135px] h-[40px] transition-transform duration-300 group-hover/store:scale-105">
-                                            <Image 
-                                                src="/images/google-play-badge.png" 
-                                                alt="Disponible en Google Play" 
-                                                fill 
-                                                className="object-contain filter grayscale opacity-75 group-hover/store:grayscale-0 group-hover/store:opacity-100 transition-all duration-500"
-                                            />
+                                {/* Play Store & App Store Container */}
+                                <div className="w-full bg-[#0a1120]/90 border border-white/10 rounded-[2rem] p-6 md:p-8 relative overflow-hidden">
+                                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-[#f39200]/5 to-orange-500/5 opacity-50"></div>
+                                    
+                                    <div className="relative z-10 flex flex-col gap-5">
+                                        <div className="flex items-center gap-3">
+                                            <span className="w-2.5 h-2.5 rounded-full bg-[#f39200] animate-pulse"></span>
+                                            <span className="text-xs font-bold text-[#f39200] uppercase tracking-wider">Lanzamiento Oficial en Tiendas</span>
                                         </div>
-                                    </div>
-                                    <div className="h-px w-full sm:h-8 sm:w-px bg-white/10 shrink-0 relative z-10"></div>
-                                    <div className="relative z-10 flex flex-col items-center sm:items-start text-center sm:text-left">
-                                        <span className="block text-[9px] text-[#f39200] font-bold uppercase tracking-widest leading-none mb-1">Próximamente en</span>
-                                        <p className="text-xs text-white/70 leading-relaxed max-w-[280px]">
-                                            Disponible muy pronto para descarga directa y segura desde la Play Store oficial.
+                                        
+                                        <p className="text-white/80 text-sm md:text-base leading-relaxed max-w-xl">
+                                            La aplicación de Clientes estará disponible próximamente para descarga directa y segura desde las tiendas oficiales de Google y Apple.
                                         </p>
+                                        
+                                        <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-2">
+                                            {/* Google Play Store Badge */}
+                                            <div className="flex items-center gap-3.5 bg-[#0c182b]/80 border border-white/10 hover:border-[#f39200]/30 rounded-2xl px-5 py-3 transition-all duration-300 shadow-md select-none">
+                                                <svg className="w-6 h-6 text-[#f39200]" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M5 3l14 9-14 9V3z" />
+                                                </svg>
+                                                <div className="flex flex-col items-start leading-tight">
+                                                    <span className="block text-[8px] uppercase tracking-widest text-[#f39200] font-bold mb-0.5">Próximamente en</span>
+                                                    <span className="text-xs font-black text-white tracking-wide">Google Play</span>
+                                                </div>
+                                            </div>
+
+                                            {/* App Store Badge */}
+                                            <div className="flex items-center gap-3.5 bg-[#0c182b]/80 border border-white/10 hover:border-white/20 rounded-2xl px-5 py-3 transition-all duration-300 shadow-md select-none">
+                                                <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 1.52-3.27 1.57-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.69 4.04-.02.07-.43 1.44-1.39 2.82M15.97 4.17c.66-.8 1.1-1.89.98-3.17-.95.04-2.05.6-2.71 1.38-.56.66-1.05 1.76-.9 3.01 1.05.08 2.06-.51 2.63-1.22z" />
+                                                </svg>
+                                                <div className="flex flex-col items-start leading-tight">
+                                                    <span className="block text-[8px] uppercase tracking-widest text-gray-400 font-bold mb-0.5">Próximamente en</span>
+                                                    <span className="text-xs font-black text-white tracking-wide">App Store</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -83,7 +101,7 @@ export default function DescargarHub() {
                         <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">
                             Aplicaciones de Gestión y Trabajo
                         </h2>
-                        <p className="text-lg text-white/70 max-w-2xl mx-auto">
+                        <p className="text-lg text-white/70 max-w-2xl mx-auto font-light">
                             Instalá las aplicaciones para Cadetes y Comercios de forma directa y segura mediante archivos APK y EXE.
                         </p>
                     </div>
@@ -229,7 +247,7 @@ export default function DescargarHub() {
                             <h3 className="text-3xl md:text-4xl font-black mb-4">
                                 Guía de Instalación Segura en 3 Pasos
                             </h3>
-                            <p className="text-white/70 max-w-2xl mx-auto">
+                            <p className="text-white/70 max-w-2xl mx-auto font-light">
                                 Sigue estos sencillos pasos para instalar las herramientas de gestión de forma segura en tu dispositivo Android.
                             </p>
                         </div>
