@@ -51,11 +51,13 @@ export default function Footer() {
                                 </a>
                             </li>
                             <li className="flex items-start gap-3 group">
-                                <a href="tel:+5493875325050" className="flex items-start gap-3">
+                                <a href="https://wa.me/5493875325050" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3">
                                     <div className="mt-0.5 w-6 h-6 rounded-md bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#f39200]/50 group-hover:bg-[#f39200]/10 transition-colors shrink-0">
-                                        <svg className="w-3.5 h-3.5 text-[#f39200]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                                        <svg className="w-3.5 h-3.5 text-[#f39200]" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.458L0 24zm6.59-4.846c1.6.95 3.498 1.45 5.42 1.451 5.398 0 9.794-4.394 9.797-9.793.001-2.615-1.017-5.074-2.865-6.924C17.107 2.037 14.65 1.018 12.03 1.018 6.633 1.018 2.239 5.413 2.236 10.81c0 1.954.51 3.86 1.478 5.485L2.73 21.082l4.917-1.29a9.752 9.752 0 00-1 .038zM17.486 14.4c-.3-.15-1.774-.875-2.05-.976-.275-.1-.475-.15-.675.15-.2.3-.775.976-.95 1.176-.175.2-.35.225-.65.075-3.037-1.513-4.66-3.08-5.463-4.46-.213-.365-.02-.562.163-.743.165-.162.35-.4.525-.6.175-.2.237-.325.35-.55.113-.225.056-.425-.028-.6-.084-.175-.675-1.625-.925-2.225-.244-.588-.492-.51-.675-.516-.172-.006-.372-.007-.572-.007-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.224 5.112 4.521.714.31 1.272.495 1.706.633.717.228 1.37.196 1.885.119.575-.085 1.774-.725 2.025-1.425.25-.7 2.5-3.075 2.5-3.2 0-.125-.075-.225-.375-.375z" />
+                                        </svg>
                                     </div>
-                                    <span className="group-hover:text-white transition-colors">+54 9 387 532-5050</span>
+                                    <span className="group-hover:text-white transition-colors">+54 9 387 532-5050 (WhatsApp)</span>
                                 </a>
                             </li>
                             <li className="flex items-start gap-3 group">
