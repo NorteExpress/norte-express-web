@@ -113,10 +113,16 @@ export default function DescargarHub() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
                         {/* Tarjeta 1: Cadete */}
-                        <div className="group relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(243,146,0,0.2)] hover:bg-white/10 transition-all duration-300 flex flex-col">
+                        <div className="group relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(243,146,0,0.2)] hover:bg-white/10 transition-all duration-300 flex flex-col items-center sm:items-start">
                             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                            <div className="w-16 h-16 bg-gradient-to-tr from-[#f39200] to-yellow-400 rounded-2xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
+                            <div className="relative w-48 h-32 min-h-[8rem] mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)]">
+                                <Image
+                                    src="/images/Norte Cadete.png"
+                                    alt="App N.O.R.T.E. Cadete"
+                                    fill
+                                    sizes="192px"
+                                    className="object-contain"
+                                />
                             </div>
                             <h3 className="text-2xl font-bold mb-2">N.O.R.T.E. Cadete</h3>
                             <span className="inline-block px-3 py-1 bg-[#f39200]/20 text-[#f39200] text-sm font-semibold rounded-full mb-4 w-fit border border-[#f39200]/30">App Rider</span>
@@ -154,10 +160,16 @@ export default function DescargarHub() {
                         </div>
 
                         {/* Tarjeta 2: Comercio */}
-                        <div className="group relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(243,146,0,0.2)] hover:bg-white/10 transition-all duration-300 flex flex-col">
+                        <div className="group relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(243,146,0,0.2)] hover:bg-white/10 transition-all duration-300 flex flex-col items-center sm:items-start">
                             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                            <div className="w-16 h-16 bg-gradient-to-tr from-[#f39200] to-yellow-400 rounded-2xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                            <div className="relative w-48 h-32 min-h-[8rem] mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)]">
+                                <Image
+                                    src="/images/norte comercio.png"
+                                    alt="App N.O.R.T.E. Comercio"
+                                    fill
+                                    sizes="192px"
+                                    className="object-contain"
+                                />
                             </div>
                             <h3 className="text-2xl font-bold mb-2">N.O.R.T.E. Comercio</h3>
                             <span className="inline-block px-3 py-1 bg-[#f39200]/20 text-[#f39200] text-sm font-semibold rounded-full mb-4 w-fit border border-[#f39200]/30">App Negocios | Android & PC</span>
