@@ -51,6 +51,14 @@ export default function Footer() {
                                 </a>
                             </li>
                             <li className="flex items-start gap-3 group">
+                                <a href="tel:+5493875325050" className="flex items-start gap-3">
+                                    <div className="mt-0.5 w-6 h-6 rounded-md bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#f39200]/50 group-hover:bg-[#f39200]/10 transition-colors shrink-0">
+                                        <svg className="w-3.5 h-3.5 text-[#f39200]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                                    </div>
+                                    <span className="group-hover:text-white transition-colors">+54 9 387 532-5050</span>
+                                </a>
+                            </li>
+                            <li className="flex items-start gap-3 group">
                                 <div className="mt-0.5 w-6 h-6 rounded-md bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#f39200]/50 group-hover:bg-[#f39200]/10 transition-colors shrink-0">
                                     <svg className="w-3.5 h-3.5 text-[#f39200]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                                 </div>
