@@ -27,11 +27,28 @@ export default function Descargas() {
                         <div className="flex flex-col items-center md:items-start text-center md:text-left flex-grow relative z-10">
                             <span className="inline-block px-4 py-1.5 rounded-full bg-[#f39200]/20 text-[#f39200] text-xs font-bold uppercase tracking-widest border border-[#f39200]/30 mb-4">App de Clientes</span>
                             <h3 className="text-3xl sm:text-4xl font-black text-white mb-4">N.O.R.T.E. Delivery</h3>
-                            <p className="text-gray-300 text-lg leading-relaxed mb-4">Pedí lo que necesites, realizá envíos, solicitá asistencia vial SOS y accedé a profesionales verificados en Salta, directo desde tu celular.</p>
-                            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#f39200] bg-[#f39200]/10 border border-[#f39200]/20 px-3.5 py-1.5 rounded-full mt-2">
-                                <span className="w-2 h-2 rounded-full bg-[#f39200] animate-pulse"></span>
-                                Próximamente disponible en Google Play & App Store
-                            </span>
+                            <p className="text-gray-300 text-lg leading-relaxed mb-6">Pedí lo que necesites, realizá envíos, solicitá asistencia vial SOS y accedé a profesionales verificados en Salta, directo desde tu celular.</p>
+                            
+                            <div className="flex flex-wrap gap-4 items-center">
+                                <a
+                                    href="https://play.google.com/store/apps/details?id=com.norte.cliente"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="relative transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-[0_10px_20px_rgba(243,146,0,0.2)] rounded-xl overflow-hidden block"
+                                >
+                                    <Image
+                                        src="/images/google-play-badge.png"
+                                        alt="Disponible en Google Play"
+                                        width={160}
+                                        height={62}
+                                        className="h-12 w-auto object-contain"
+                                    />
+                                </a>
+                                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-gray-400 bg-white/5 border border-white/10 px-3.5 py-2.5 rounded-xl">
+                                    <span className="w-2 h-2 rounded-full bg-gray-500"></span>
+                                    App Store (Próximamente)
+                                </span>
+                            </div>
                         </div>
                     </div>
 

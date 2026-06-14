@@ -57,34 +57,39 @@ export default function DescargarHub() {
                                     
                                     <div className="relative z-10 flex flex-col gap-5">
                                         <div className="flex items-center gap-3">
-                                            <span className="w-2.5 h-2.5 rounded-full bg-[#f39200] animate-pulse"></span>
-                                            <span className="text-xs font-bold text-[#f39200] uppercase tracking-wider">Lanzamiento Oficial en Tiendas</span>
+                                            <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
+                                            <span className="text-xs font-bold text-green-400 uppercase tracking-wider">Disponible Ahora</span>
                                         </div>
                                         
                                         <p className="text-white/80 text-sm md:text-base leading-relaxed max-w-xl">
-                                            La aplicación de Clientes estará disponible próximamente para descarga directa y segura desde las tiendas oficiales de Google y Apple.
+                                            La aplicación de Clientes ya se encuentra disponible para su descarga oficial en dispositivos Android a través de Google Play Store.
                                         </p>
                                         
                                         <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-2">
                                             {/* Google Play Store Badge */}
-                                            <div className="flex items-center gap-3.5 bg-[#0c182b]/80 border border-white/10 hover:border-[#f39200]/30 rounded-2xl px-5 py-3 transition-all duration-300 shadow-md select-none">
-                                                <svg className="w-6 h-6 text-[#f39200]" viewBox="0 0 24 24" fill="currentColor">
-                                                    <path d="M5 3l14 9-14 9V3z" />
-                                                </svg>
-                                                <div className="flex flex-col items-start leading-tight">
-                                                    <span className="block text-[8px] uppercase tracking-widest text-[#f39200] font-bold mb-0.5">Próximamente en</span>
-                                                    <span className="text-xs font-black text-white tracking-wide">Google Play</span>
-                                                </div>
-                                            </div>
+                                            <a
+                                                href="https://play.google.com/store/apps/details?id=com.norte.cliente"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="relative transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-[0_10px_20px_rgba(243,146,0,0.15)] rounded-xl overflow-hidden block"
+                                            >
+                                                <Image
+                                                    src="/images/google-play-badge.png"
+                                                    alt="Disponible en Google Play"
+                                                    width={160}
+                                                    height={62}
+                                                    className="h-12 w-auto object-contain"
+                                                />
+                                            </a>
 
                                             {/* App Store Badge */}
-                                            <div className="flex items-center gap-3.5 bg-[#0c182b]/80 border border-white/10 hover:border-white/20 rounded-2xl px-5 py-3 transition-all duration-300 shadow-md select-none">
-                                                <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                            <div className="flex items-center gap-3.5 bg-[#0c182b]/80 border border-white/10 rounded-2xl px-5 py-3 transition-all duration-300 shadow-md select-none opacity-50">
+                                                <svg className="w-6 h-6 text-white/40" viewBox="0 0 24 24" fill="currentColor">
                                                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 1.52-3.27 1.57-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.69 4.04-.02.07-.43 1.44-1.39 2.82M15.97 4.17c.66-.8 1.1-1.89.98-3.17-.95.04-2.05.6-2.71 1.38-.56.66-1.05 1.76-.9 3.01 1.05.08 2.06-.51 2.63-1.22z" />
                                                 </svg>
                                                 <div className="flex flex-col items-start leading-tight">
-                                                    <span className="block text-[8px] uppercase tracking-widest text-gray-400 font-bold mb-0.5">Próximamente en</span>
-                                                    <span className="text-xs font-black text-white tracking-wide">App Store</span>
+                                                    <span className="block text-[8px] uppercase tracking-widest text-gray-500 font-bold mb-0.5">Próximamente en</span>
+                                                    <span className="text-xs font-black text-white/40 tracking-wide">App Store</span>
                                                 </div>
                                             </div>
                                         </div>
