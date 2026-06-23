@@ -1,7 +1,72 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function DescargarHub() {
+export const dynamic = 'force-dynamic';
+
+interface DownloadData {
+    cadete_apk_download_url: string;
+    comercio_apk_download_url: string;
+    desktop_download_url: string;
+    latest_cadete_apk_version: string;
+    latest_comercio_apk_version: string;
+    latest_desktop_version: string;
+}
+
+const FALLBACK_DOWNLOADS: DownloadData = {
+    cadete_apk_download_url: '/apks/norte-cadete.apk',
+    comercio_apk_download_url: 'https://drive.google.com/uc?export=download&id=1K0ScR-Gp_Gtg70kPWQoPEoDofYUKT6ba',
+    desktop_download_url: 'https://drive.google.com/uc?export=download&id=1ql2b2JP9wa4gpwpNGxtzGf202_ei9m-0',
+    latest_cadete_apk_version: '1.0.0',
+    latest_comercio_apk_version: '1.0.0',
+    latest_desktop_version: '1.0.0'
+};
+
+async function getDownloads(): Promise<DownloadData> {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://ntbhzqhpeukwdzzhdunj.supabase.co';
+    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'sb_publishable_mZ4CWzQal3-WcSR1C9Ur9A_EMeKz8_d';
+    
+    try {
+        const response = await fetch(`${supabaseUrl}/rest/v1/rpc/get_public_downloads`, {
+            method: 'POST',
+            headers: {
+                'apikey': supabaseKey,
+                'Authorization': `Bearer ${supabaseKey}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({}),
+            next: {
+                revalidate: 0 // Fetch fresh data
+            }
+        });
+
+        if (!response.ok) {
+            console.error('Failed to fetch public downloads from Supabase RPC, status:', response.status);
+            return FALLBACK_DOWNLOADS;
+        }
+
+        const data = await response.json();
+        if (Array.isArray(data) && data.length > 0) {
+            const row = data[0];
+            return {
+                cadete_apk_download_url: row.cadete_apk_download_url || FALLBACK_DOWNLOADS.cadete_apk_download_url,
+                comercio_apk_download_url: row.comercio_apk_download_url || FALLBACK_DOWNLOADS.comercio_apk_download_url,
+                desktop_download_url: row.desktop_download_url || FALLBACK_DOWNLOADS.desktop_download_url,
+                latest_cadete_apk_version: row.latest_cadete_apk_version || FALLBACK_DOWNLOADS.latest_cadete_apk_version,
+                latest_comercio_apk_version: row.latest_comercio_apk_version || FALLBACK_DOWNLOADS.latest_comercio_apk_version,
+                latest_desktop_version: row.latest_desktop_version || FALLBACK_DOWNLOADS.latest_desktop_version,
+            };
+        }
+        
+        return FALLBACK_DOWNLOADS;
+    } catch (error) {
+        console.error('Error fetching downloads from Supabase:', error);
+        return FALLBACK_DOWNLOADS;
+    }
+}
+
+export default async function DescargarHub() {
+    const downloads = await getDownloads();
+
     return (
         <div className="min-h-screen bg-[#1c355c] text-white font-sans selection:bg-[#f39200] selection:text-white">
             {/* Navbar / Botón Volver */}
@@ -125,7 +190,7 @@ export default function DescargarHub() {
                                 />
                             </div>
                             <h3 className="text-2xl font-bold mb-2">N.O.R.T.E. Cadete</h3>
-                            <span className="inline-block px-3 py-1 bg-[#f39200]/20 text-[#f39200] text-sm font-semibold rounded-full mb-4 w-fit border border-[#f39200]/30">App Rider</span>
+                            <span className="inline-block px-3 py-1 bg-[#f39200]/20 text-[#f39200] text-sm font-semibold rounded-full mb-4 w-fit border border-[#f39200]/30">App Rider v{downloads.latest_cadete_apk_version}</span>
                             <p className="text-base font-semibold text-white mb-2">Tu oficina es la ciudad.</p>
                             <p className="text-white/70 mb-4 text-sm leading-relaxed">
                                 Conectate a la central logística. Recibe viajes optimizados por GPS, gestiona tus ganancias y accede a soporte vial S.O.S.
@@ -143,7 +208,7 @@ export default function DescargarHub() {
 
                             <div className="w-full mt-4">
                                 <a
-                                    href="/apks/norte-cadete.apk"
+                                    href={downloads.cadete_apk_download_url}
                                     download
                                     className="group relative w-full py-4 px-6 rounded-2xl font-bold text-white bg-gradient-to-r from-[#f39200] via-[#ffa827] to-[#f39200] bg-[length:200%_auto] hover:bg-[position:right_center] shadow-[0_4px_20px_rgba(243,146,0,0.35)] hover:shadow-[0_0_30px_rgba(243,146,0,0.6)] transition-all duration-500 flex items-center justify-center gap-3 overflow-hidden border border-white/10 hover:scale-[1.03] active:scale-[0.98] transform-gpu"
                                 >
@@ -190,7 +255,7 @@ export default function DescargarHub() {
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mt-4">
                                 <a
-                                    href="https://drive.google.com/uc?export=download&id=1K0ScR-Gp_Gtg70kPWQoPEoDofYUKT6ba"
+                                    href={downloads.comercio_apk_download_url}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="group relative w-full py-4 px-4 rounded-2xl font-bold text-white bg-gradient-to-r from-[#f39200] via-[#ffa827] to-[#f39200] bg-[length:200%_auto] hover:bg-[position:right_center] shadow-[0_4px_20px_rgba(243,146,0,0.35)] hover:shadow-[0_0_30px_rgba(243,146,0,0.6)] transition-all duration-500 flex items-center justify-center gap-2.5 overflow-hidden border border-white/10 hover:scale-[1.03] active:scale-[0.98] transform-gpu"
@@ -200,12 +265,12 @@ export default function DescargarHub() {
                                     
                                     <svg className="w-5.5 h-5.5 relative z-10 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                                     <div className="relative z-10 flex flex-col items-start leading-tight">
-                                        <span className="block text-[8px] uppercase tracking-widest text-white/80 font-bold mb-0.5">Para Celular</span>
+                                        <span className="block text-[8px] uppercase tracking-widest text-white/80 font-bold mb-0.5">Para Celular (v{downloads.latest_comercio_apk_version})</span>
                                         <span className="text-xs font-black tracking-wide">Android (APK)</span>
                                     </div>
                                 </a>
                                 <a
-                                    href="https://drive.google.com/uc?export=download&id=1ql2b2JP9wa4gpwpNGxtzGf202_ei9m-0"
+                                    href={downloads.desktop_download_url}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="group relative w-full py-4 px-4 rounded-2xl font-bold text-white bg-gradient-to-br from-[#1b3152] to-[#10223b] hover:from-[#213b63] hover:to-[#142c4c] shadow-[0_4px_15px_rgba(0,0,0,0.3)] hover:shadow-[0_0_25px_rgba(243,146,0,0.35)] transition-all duration-500 flex items-center justify-center gap-2.5 overflow-hidden border border-[#f39200]/30 hover:border-[#f39200] hover:scale-[1.03] active:scale-[0.98] transform-gpu"
@@ -215,7 +280,7 @@ export default function DescargarHub() {
                                     
                                     <svg className="w-5.5 h-5.5 relative z-10 text-[#f39200] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                                     <div className="relative z-10 flex flex-col items-start leading-tight">
-                                        <span className="block text-[8px] uppercase tracking-widest text-[#f39200]/80 font-bold mb-0.5">Para PC / Windows</span>
+                                        <span className="block text-[8px] uppercase tracking-widest text-[#f39200]/80 font-bold mb-0.5">Para PC / Windows (v{downloads.latest_desktop_version})</span>
                                         <span className="text-xs font-black tracking-wide text-white">Windows (EXE)</span>
                                     </div>
                                 </a>
